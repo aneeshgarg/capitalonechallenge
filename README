@@ -17,11 +17,13 @@ Options:
 --ignore-donuts         : ignore transactions for donuts Default: false
 --ignore-cc-payments    : ignore transactions involved paying credit card bills. Ignores transactions from both spending and income. Default: false
 
-examples of running:
+examples of code execution:
 java -jar target\capitalone-coding-challenge.jar --ignore-donuts --crystal-ball --ignore-cc-payments
 java -jar target\capitalone-coding-challenge.jar --username abc --password abc
-java -jar target\capitalone-coding-challenge.jar --username interview@levelmoney.com --password password2 --ignore-donuts --crystal-ball --ignore-cc-payments
+java -jar target\capitalone-coding-challenge.jar --username <putusername> --password <putpassword> --ignore-donuts --crystal-ball --ignore-cc-payments
 java -jar target\capitalone-coding-challenge.jar --ignore-donuts --ignore-cc-payments
 java -jar target\capitalone-coding-challenge.jar --crystal-ball --ignore-cc-payments
 java -jar target\capitalone-coding-challenge.jar --ignore-donuts
 
+DISCLAIMER:
+I was able to test it with only with one user because I didn't know other authorized user. But it should work with other users as well.
