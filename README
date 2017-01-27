@@ -8,7 +8,7 @@ How to Build:
 - Go to project's root directory and run "mvn clean package"
 
 How to Run:
-- Go to project's root directory and run "java -jar target\capitalone-coding-challenge.jar <options>"
+- Go to project's root directory and run "java -jar target/capitalone-coding-challenge.jar <options>"
 
 Options:
 --username <username>   : provide a registered user's email. Password option is also required otherwise default user will be used. Default User: interview@levelmoney.com
@@ -18,12 +18,12 @@ Options:
 --ignore-cc-payments    : ignore transactions involved paying credit card bills. Ignores transactions from both spending and income. Default: false
 
 examples of code execution:
-java -jar target\capitalone-coding-challenge.jar --ignore-donuts --crystal-ball --ignore-cc-payments
-java -jar target\capitalone-coding-challenge.jar --username abc --password abc
-java -jar target\capitalone-coding-challenge.jar --username <putusername> --password <putpassword> --ignore-donuts --crystal-ball --ignore-cc-payments
-java -jar target\capitalone-coding-challenge.jar --ignore-donuts --ignore-cc-payments
-java -jar target\capitalone-coding-challenge.jar --crystal-ball --ignore-cc-payments
-java -jar target\capitalone-coding-challenge.jar --ignore-donuts
+java -jar target/capitalone-coding-challenge.jar --ignore-donuts --crystal-ball --ignore-cc-payments
+java -jar target/capitalone-coding-challenge.jar --username abc --password abc
+java -jar target/capitalone-coding-challenge.jar --username <putusername> --password <putpassword> --ignore-donuts --crystal-ball --ignore-cc-payments
+java -jar target/capitalone-coding-challenge.jar --ignore-donuts --ignore-cc-payments
+java -jar target/capitalone-coding-challenge.jar --crystal-ball --ignore-cc-payments
+java -jar target/capitalone-coding-challenge.jar --ignore-donuts
 
 DISCLAIMER:
 I was able to test it with only with one user because I didn't know other authorized user. But it should work with other users as well.
