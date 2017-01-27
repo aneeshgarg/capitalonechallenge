@@ -1,0 +1,27 @@
+Software Pre-requisite:
+- Maven 3 or later
+- Java 8
+- java in PATH environment variable (i.e. ability to run jar from command line)
+
+How to Build:
+
+- Go to project's root directory and run "mvn clean package"
+
+How to Run:
+- Go to project's root directory and run "java -jar target\capitalone-coding-challenge.jar <options>"
+
+Options:
+--username <username>   : provide a registered user's email. Password option is also required otherwise default user will be used. Default User: interview@levelmoney.com
+--password <password>   : provide a registered user's email. Username option is also required otherwise default user will be used. Default User: interview@levelmoney.com
+--crystal-ball          : include projected transactions for current month Default: false
+--ignore-donuts         : ignore transactions for donuts Default: false
+--ignore-cc-payments    : ignore transactions involved paying credit card bills. Ignores transactions from both spending and income. Default: false
+
+examples of running:
+java -jar target\capitalone-coding-challenge.jar --ignore-donuts --crystal-ball --ignore-cc-payments
+java -jar target\capitalone-coding-challenge.jar --username abc --password abc
+java -jar target\capitalone-coding-challenge.jar --username interview@levelmoney.com --password password2 --ignore-donuts --crystal-ball --ignore-cc-payments
+java -jar target\capitalone-coding-challenge.jar --ignore-donuts --ignore-cc-payments
+java -jar target\capitalone-coding-challenge.jar --crystal-ball --ignore-cc-payments
+java -jar target\capitalone-coding-challenge.jar --ignore-donuts
+
