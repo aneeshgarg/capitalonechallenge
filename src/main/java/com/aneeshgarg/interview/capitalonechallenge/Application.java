@@ -43,18 +43,28 @@ public class Application {
         boolean ignoreCCPayments = false;
         boolean crystalBall = false;
 
-        if (args != null && args.length > 0) {
+        if (args.length > 0) {
             for (int i = 0; i < args.length; i++) {
                 switch (args[i]) {
                     case USERNAME_OPTION:
-                        username = args[i + 1];
-                        i = i + 1;
-                        logger.info("Username Provided: " + username);
+                        if ((i + 1) < args.length) {
+                            username = args[i + 1];
+                            i = i + 1;
+                            logger.info("Username Provided: " + username);
+                        } else {
+                            logger.error("Insufficient arguments for username. Exiting Application.");
+                            return;
+                        }
                         break;
                     case PASSWORD_OPTION:
-                        password = args[i + 1];
-                        i = i + 1;
-                        logger.info("Password Provided. ");
+                        if ((i + 1) < args.length) {
+                            password = args[i + 1];
+                            i = i + 1;
+                            logger.info("Password Provided. ");
+                        } else {
+                            logger.error("Insufficient arguments for password. Exiting Application.");
+                            return;
+                        }
                         break;
                     case IGNORE_DONUTS_OPTION:
                         ignoreDonuts = true;
@@ -135,8 +145,8 @@ public class Application {
             logger.info("*********************************** TRANSACTION SUMMARY ***********************************");
             logger.info("{}{}{}", String.format("%10s", "Month"), String.format("%10s", "Spent"), String.format("%10s", "Income"));
             for (String key : keySet) {
-                String spent = "";
-                String income = "";
+                String spent = "$0.00";
+                String income = "$0.00";
                 if (spendSummary.containsKey(key)) {
                     long amount = spendSummary.get(key);
                     spent = Utility.getDisplayAmountInDollars(amount);
